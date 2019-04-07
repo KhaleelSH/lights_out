@@ -110,6 +110,7 @@ class _LightsOutPageState extends State<LightsOutPage> {
         flip(i - 1, j);
         flip(i, j + 1);
         flip(i, j - 1);
+        checkScore();
       },
       child: Container(
         width: size.width / n,
@@ -154,6 +155,10 @@ class _LightsOutPageState extends State<LightsOutPage> {
       data[i][j] = !data[i][j];
       data[i][j] ? onLights++ : onLights--;
     }
+    setState(() {});
+  }
+
+  void checkScore() {
     if (onLights == n * n) {
       isWinner = true;
       audioPlayer.play('tada.wav');
