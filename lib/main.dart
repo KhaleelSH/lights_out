@@ -105,11 +105,11 @@ class _LightsOutPageState extends State<LightsOutPage> {
     return GestureDetector(
       onTap: () {
         audioPlayer.play('blop.wav');
-        swap(i, j);
-        swap(i + 1, j);
-        swap(i - 1, j);
-        swap(i, j + 1);
-        swap(i, j - 1);
+        flip(i, j);
+        flip(i + 1, j);
+        flip(i - 1, j);
+        flip(i, j + 1);
+        flip(i, j - 1);
       },
       child: Container(
         width: size.width / n,
@@ -149,17 +149,16 @@ class _LightsOutPageState extends State<LightsOutPage> {
         n, (i) => List<bool>.generate(n, (i) => false));
   }
 
-  void swap(int i, int j) {
-    setState(() {
-      if (i >= 0 && i < data.length && j >= 0 && j < data[0].length) {
-        data[i][j] = !data[i][j];
-        data[i][j] ? onLights++ : onLights--;
-      }
-      if (onLights == n * n) {
-        isWinner = true;
-        audioPlayer.play('tada.wav');
-      }
-    });
+  void flip(int i, int j) {
+    if (i >= 0 && i < data.length && j >= 0 && j < data[0].length) {
+      data[i][j] = !data[i][j];
+      data[i][j] ? onLights++ : onLights--;
+    }
+    if (onLights == n * n) {
+      isWinner = true;
+      audioPlayer.play('tada.wav');
+    }
+    setState(() {});
   }
 
   void refresh() {
