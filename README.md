@@ -1,8 +1,10 @@
 # lights_out
 
 LightsOut is a flutter implementation of the classic LightsOut search problem.
-> This project is meant to be my contribution in #FlutterCreate 
+> This project is meant to be my contribution in #FlutterCreate
 
+
+> 🎉 **I won a 'Google Home Mini' for my participation in the contest.** You can find my name here: https://medium.com/flutter-io/the-flutter-create-winners-are-40980f2d20b3
 
 Gameplay             |  Winning
 :-------------------------:|:-------------------------:

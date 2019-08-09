@@ -3,12 +3,12 @@ description: A new Flutter project.
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: ">=2.4.0 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  audioplayers: ^0.10.1
+  audioplayers: ^0.13.1
   fireworks: ^0.0.1
 
 dev_dependencies:
